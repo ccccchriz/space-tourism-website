@@ -6,28 +6,32 @@ import { useEffect, useRef, useState } from "react";
 export default function Header() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
-  const header = useRef<HTMLElement>(null);
+  const nav = useRef<HTMLElement>(null);
 
   const handleClick = (event: MouseEvent) => {
-    console.log(event);
-    if (isExpanded && header.current!.contains(event.target as Node)) {
+    if (!nav.current!.contains(event.target as Node)) {
+      setIsExpanded(false);
+    }
+  };
+
+  const handleKeyboard = (event: KeyboardEvent) => {
+    if (event.key == "Escape") {
       setIsExpanded(false);
     }
   };
 
   useEffect(() => {
     window.addEventListener("click", handleClick);
+    window.addEventListener("keydown", handleKeyboard);
 
     return () => {
       window.removeEventListener("click", handleClick);
+      window.removeEventListener("keydown", handleKeyboard);
     };
   }, []);
 
   return (
-    <header
-      ref={header}
-      className="bg-lighter-black p-4 flex justify-between items-center"
-    >
+    <header className="bg-lighter-black p-4 flex justify-between items-center">
       <img src={logoUrl} alt="" className="size-10 rounded-full" />
       <button
         aria-expanded={isExpanded}
@@ -44,6 +48,7 @@ export default function Header() {
         )}
       </button>
       <nav
+        ref={nav}
         className={`bg-opacity-5 bg-black backdrop-blur-2xl ${
           isExpanded ? "absolute" : "hidden"
         } right-0 top-0 h-full w-full max-w-64 p-4 pt-16`}
