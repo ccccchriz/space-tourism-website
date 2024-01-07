@@ -1,11 +1,9 @@
-import MainLayout from "./layouts/MainLayout";
+import Home from "./assets/pages/Home";
 
 function App() {
   return (
     <>
-      <MainLayout>
-        <div>dasdasd</div>
-      </MainLayout>
+      <Home />
     </>
   );
 }
