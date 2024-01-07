@@ -6,6 +6,7 @@ export default {
       white: "hsl(0, 0%, 100%)",
       "light-purple": "hsl(231, 77%, 90%)",
       "lighter-black": "hsl(230, 35%, 7%)",
+      black: "hsl(0, 0%, 0%)",
     },
     fontFamily: {
       primary: ["Bellefair", "serif"],
