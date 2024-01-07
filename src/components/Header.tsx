@@ -51,7 +51,7 @@ export default function Header() {
         ref={nav}
         className={`bg-opacity-5 bg-black backdrop-blur-2xl ${
           isExpanded ? "absolute" : "hidden"
-        } right-0 top-0 h-full w-full max-w-64 p-4 pt-16`}
+        } right-0 top-0 h-full w-full max-w-64 p-4 pt-16 z-50`}
       >
         <ul className="flex flex-col gap-4 uppercase text-white font-secondary text-xl tracking-widest">
           <li className="flex gap-2 before:content-['00'] before:font-bold">
