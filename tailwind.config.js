@@ -13,6 +13,7 @@ export default {
     },
     fontWeight: {
       regular: 400,
+      bold: 700,
     },
     screens: {
       tablet: "48rem",
