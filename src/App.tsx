@@ -1,10 +1,11 @@
-import Header from "./components/Header";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
   return (
     <>
-      <Header></Header>
-      <main className="bg-[red] grow"></main>
+      <MainLayout>
+        <div>dasdasd</div>
+      </MainLayout>
     </>
   );
 }
