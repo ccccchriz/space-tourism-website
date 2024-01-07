@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
       white: "hsl(0, 0%, 100%)",
-      "light-purple": "hsl(231°, 77%, 90%)",
-      "lighter-black": "hsl(230°, 35%, 7%)",
+      "light-purple": "hsl(231, 77%, 90%)",
+      "lighter-black": "hsl(230, 35%, 7%)",
     },
     fontFamily: {
       primary: ["Bellefair", "serif"],
