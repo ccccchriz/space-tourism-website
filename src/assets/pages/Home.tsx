@@ -2,7 +2,7 @@ import MainLayout from "../../layouts/MainLayout";
 
 export default function Home() {
   return (
-    <MainLayout>
+    <MainLayout background="home">
       <h2 className="grid gap-6 uppercase font-secondary text-base text-light-purple text-center tracking-widest">
         So you want to travel to{" "}
         <span className="font-primary text-7xl text-white">space</span>
