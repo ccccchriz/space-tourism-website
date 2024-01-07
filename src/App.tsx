@@ -1,9 +1,9 @@
-import Home from "./assets/pages/Home";
+import Destinations from "./assets/pages/Destinations";
 
 function App() {
   return (
     <>
-      <Home />
+      <Destinations />
     </>
   );
 }
