@@ -1,0 +1,68 @@
+import logoUrl from "../assets/shared/logo.svg";
+import hamburgerUrl from "../assets/shared/icon-hamburger.svg";
+import closeUrl from "../assets/shared/icon-close.svg";
+import { useEffect, useRef, useState } from "react";
+
+export default function Header() {
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
+  const header = useRef<HTMLElement>(null);
+
+  const handleClick = (event: MouseEvent) => {
+    console.log(event);
+    if (isExpanded && header.current!.contains(event.target as Node)) {
+      setIsExpanded(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("click", handleClick);
+
+    return () => {
+      window.removeEventListener("click", handleClick);
+    };
+  }, []);
+
+  return (
+    <header
+      ref={header}
+      className="bg-lighter-black p-4 flex justify-between items-center"
+    >
+      <img src={logoUrl} alt="" className="size-10 rounded-full" />
+      <button
+        aria-expanded={isExpanded}
+        onClick={(event: React.MouseEvent) => {
+          event.stopPropagation();
+          setIsExpanded((value) => !value);
+        }}
+        className="z-50"
+      >
+        {isExpanded ? (
+          <img src={closeUrl} alt="close menu"></img>
+        ) : (
+          <img src={hamburgerUrl} alt="open mneu"></img>
+        )}
+      </button>
+      <nav
+        className={`bg-opacity-5 bg-black backdrop-blur-2xl ${
+          isExpanded ? "absolute" : "hidden"
+        } right-0 top-0 h-full w-full max-w-64 p-4 pt-16`}
+      >
+        <ul className="flex flex-col gap-4 uppercase text-white font-secondary text-xl tracking-widest">
+          <li className="flex gap-2 before:content-['00'] before:font-bold">
+            Home
+          </li>
+          <li className="flex gap-2 before:content-['01'] before:font-bold">
+            Destination
+          </li>
+          <li className="flex gap-2 before:content-['02'] before:font-bold">
+            Crew
+          </li>
+          <li className="flex gap-2 before:content-['03'] before:font-bold">
+            Technology
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
