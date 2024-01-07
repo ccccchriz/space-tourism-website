@@ -1,8 +1,8 @@
-import MainLayout from "../../layouts/MainLayout";
-import moonUrl from "../../assets/destination/image-moon.webp";
-import marsUrl from "../../assets/destination/image-mars.webp";
-import europaUrl from "../../assets/destination/image-europa.webp";
-import titanUrl from "../../assets/destination/image-titan.webp";
+import MainLayout from "../layouts/MainLayout";
+import moonUrl from "../assets/destination/image-moon.webp";
+import marsUrl from "../assets/destination/image-mars.webp";
+import europaUrl from "../assets/destination/image-europa.webp";
+import titanUrl from "../assets/destination/image-titan.webp";
 import { useState } from "react";
 
 const data = [

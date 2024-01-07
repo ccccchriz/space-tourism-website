@@ -1,4 +1,4 @@
-import Destinations from "./assets/pages/Destinations";
+import Destinations from "./pages/Destinations";
 
 function App() {
   return (
