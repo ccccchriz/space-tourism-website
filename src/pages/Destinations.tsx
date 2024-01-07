@@ -49,15 +49,15 @@ export default function Destinations() {
 
   return (
     <MainLayout background="destination">
-      <h2 className="flex gap-4 uppercase font-secondary text-white before:content-['01'] before:opacity-25 tracking-widest">
+      <h2 className="flex gap-4 uppercase font-secondary text-white before:content-['01'] before:opacity-25 tracking-widest mt-8">
         Pick your destination
       </h2>
       <img
         src={data[currentTab].image}
         alt={data[currentTab].alt}
-        className="max-w-24"
+        className="max-w-64 my-6"
       ></img>
-      <ul className="flex flex-wrap gap-4 mx-4">
+      <ul className="flex flex-wrap gap-4 mx-4 mb-12">
         {data.map((el, index) => (
           <li
             key={index}
@@ -79,16 +79,16 @@ export default function Destinations() {
       <h3 className="font-primary text-6xl text-white uppercase">
         {data[currentTab].name}
       </h3>
-      <p className="font-secondary text-light-purple text-center mx-4">
+      <p className="font-secondary text-light-purple text-center mx-4 pb-8 mb-8 border-b border-b-light-purple">
         {data[currentTab].description}
       </p>
-      <p className="uppercase tracking-widest font-secondary text-light-purple grid text-center">
+      <p className="uppercase tracking-widest font-secondary text-light-purple grid text-center mb-8">
         Average distance{" "}
         <span className="font-primary text-3xl text-white tracking-normal">
           {data[currentTab].distance}
         </span>
       </p>
-      <p className="uppercase tracking-widest font-secondary text-light-purple grid text-center">
+      <p className="uppercase tracking-widest font-secondary text-light-purple grid text-center mb-16">
         Travel time{" "}
         <span className="font-primary text-3xl text-white tracking-normal">
           {data[currentTab].travel}
