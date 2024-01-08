@@ -53,7 +53,7 @@ export default function Crew() {
             aria-selected={index == currentTab}
             onClick={() => setCurrentTab(index)}
             className={`tracking-widest uppercase font-secondary size-6 rounded-full bg-white bg-opacity-15 ${
-              index == currentTab ? "bg-opacity-100" : "hover:bg-opacity-50"
+              index == currentTab ? "!bg-opacity-100 " : "hover:bg-opacity-50"
             }`}
           >
             <span className="sr-only">{el.role}</span>

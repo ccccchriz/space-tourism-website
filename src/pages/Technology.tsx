@@ -56,7 +56,7 @@ export default function Technology() {
             onClick={() => setCurrentTab(index)}
             className={`tracking-widest uppercase font-secondary text-white p-4 border border-white rounded-full size-10 flex justify-center items-center border-opacity-25 ${
               index == currentTab
-                ? "bg-white text-black"
+                ? "bg-white !text-black"
                 : "hover:border-opacity-100"
             }`}
           >
