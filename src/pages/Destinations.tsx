@@ -57,27 +57,23 @@ export default function Destinations() {
         alt={data[currentTab].alt}
         className="max-w-64 my-6"
       ></img>
-      <ul className="flex flex-wrap gap-4 mx-4 mb-12">
+      <div role="tablist" className="flex flex-wrap gap-4 mx-4 mb-12">
         {data.map((el, index) => (
-          <li
+          <button
             key={index}
-            className={`font-secondary text-white ${
+            role="tab"
+            aria-selected={index == currentTab}
+            onClick={() => setCurrentTab(index)}
+            className={`tracking-widest uppercase font-secondary text-white ${
               index == currentTab
                 ? "border-b-2 border-b-white"
                 : "hover:border-b-2 hover:border-b-white hover:border-opacity-50"
             }`}
           >
-            <button
-              role="tab"
-              aria-selected={index == currentTab}
-              onClick={() => setCurrentTab(index)}
-              className="tracking-widest uppercase"
-            >
-              {el.name}
-            </button>
-          </li>
+            {el.name}
+          </button>
         ))}
-      </ul>
+      </div>
       <h3 className="font-primary text-6xl text-white uppercase">
         {data[currentTab].name}
       </h3>
