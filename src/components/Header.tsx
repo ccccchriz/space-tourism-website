@@ -33,7 +33,14 @@ export default function Header() {
 
   return (
     <header className="bg-lighter-black p-4 flex justify-between items-center">
-      <img src={logoUrl} alt="" className="size-10 rounded-full" />
+      <Link to="/">
+        <img
+          src={logoUrl}
+          alt="Space Tourism logo - home"
+          className="size-10 rounded-full"
+        />
+      </Link>
+
       <button
         aria-expanded={isExpanded}
         onClick={(event: React.MouseEvent) => {
