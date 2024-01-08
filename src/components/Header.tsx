@@ -52,19 +52,19 @@ export default function Header() {
         ref={nav}
         className={`bg-opacity-5 bg-black backdrop-blur-2xl ${
           isExpanded ? "absolute" : "hidden"
-        } right-0 top-0 h-full w-full max-w-64 p-4 pt-16 z-40`}
+        } right-0 top-0 h-full w-full max-w-64 p-4 pt-20 z-40`}
       >
         <ul className="flex flex-col gap-4 uppercase text-white font-secondary text-xl tracking-widest">
-          <li className="flex gap-2 before:content-['00'] before:font-bold">
+          <li className="flex gap-2 before:content-['00'] before:font-bold py-2">
             <Link to="/">Home</Link>
           </li>
-          <li className="flex gap-2 before:content-['01'] before:font-bold">
+          <li className="flex gap-2 before:content-['01'] before:font-bold py-2">
             <Link to="/destinations">Destination</Link>
           </li>
-          <li className="flex gap-2 before:content-['02'] before:font-bold">
+          <li className="flex gap-2 before:content-['02'] before:font-bold py-2">
             <Link to="/crew">Crew</Link>
           </li>
-          <li className="flex gap-2 before:content-['03'] before:font-bold">
+          <li className="flex gap-2 before:content-['03'] before:font-bold py-2">
             <Link to="/technology">Technology</Link>
           </li>
         </ul>

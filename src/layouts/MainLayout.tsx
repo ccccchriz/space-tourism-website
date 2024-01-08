@@ -19,7 +19,7 @@ export default function MainLayout({ children, background }: MainLayoutProps) {
     <>
       <Header />
       <main
-        className={`grow grid place-items-center bg-no-repeat ${backgrounds[background]}`}
+        className={`bg-black grow grid items-start justify-items-center bg-no-repeat ${backgrounds[background]}`}
       >
         <h1 className="sr-only">Space Tourism</h1>
         {children}
