@@ -1,9 +1,9 @@
-import Destinations from "./pages/Destinations";
+import Crew from "./pages/Crew";
 
 function App() {
   return (
     <>
-      <Destinations />
+      <Crew />
     </>
   );
 }
