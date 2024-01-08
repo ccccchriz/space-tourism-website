@@ -4,12 +4,6 @@ import closeUrl from "../assets/shared/icon-close.svg";
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-interface LocationState {
-  from: {
-    pathname: string;
-  };
-}
-
 export default function Header() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
