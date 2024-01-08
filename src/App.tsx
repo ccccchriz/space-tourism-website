@@ -1,9 +1,9 @@
-import Crew from "./pages/Crew";
+import Technology from "./pages/Technology";
 
 function App() {
   return (
     <>
-      <Crew />
+      <Technology />
     </>
   );
 }
