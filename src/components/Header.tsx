@@ -2,6 +2,7 @@ import logoUrl from "../assets/shared/logo.svg";
 import hamburgerUrl from "../assets/shared/icon-hamburger.svg";
 import closeUrl from "../assets/shared/icon-close.svg";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
@@ -55,16 +56,16 @@ export default function Header() {
       >
         <ul className="flex flex-col gap-4 uppercase text-white font-secondary text-xl tracking-widest">
           <li className="flex gap-2 before:content-['00'] before:font-bold">
-            Home
+            <Link to="/">Home</Link>
           </li>
           <li className="flex gap-2 before:content-['01'] before:font-bold">
-            Destination
+            <Link to="/destinations">Destination</Link>
           </li>
           <li className="flex gap-2 before:content-['02'] before:font-bold">
-            Crew
+            <Link to="/crew">Crew</Link>
           </li>
           <li className="flex gap-2 before:content-['03'] before:font-bold">
-            Technology
+            <Link to="/technology">Technology</Link>
           </li>
         </ul>
       </nav>
