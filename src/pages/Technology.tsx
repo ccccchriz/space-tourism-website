@@ -69,7 +69,7 @@ export default function Technology() {
         The terminology...
         <span className="text-3xl text-white">{data[currentTab].name}</span>
       </h3>
-      <p className="font-secondary text-center text-light-purple mx-4 mb-16 mt-4">
+      <p className="font-secondary text-center text-light-purple mx-4 mb-16 mt-4 tablet:max-w-[28rem] leading-7">
         {data[currentTab].description}
       </p>
     </MainLayout>
