@@ -81,7 +81,7 @@ export default function Destinations() {
         <h3 className="font-primary text-6xl text-white uppercase tablet:col-[1_/_3]">
           {data[currentTab].name}
         </h3>
-        <p className="font-secondary text-light-purple text-center mx-7 pb-8 mb-8 border-b border-b-light-purple tablet:col-[1_/_3] tablet:max-w-[36rem]">
+        <p className="font-secondary text-light-purple text-center mx-7 pb-8 mb-8 border-b border-b-light-purple tablet:col-[1_/_3] tablet:max-w-[36rem] leading-7">
           {data[currentTab].description}
         </p>
         <p className="uppercase tracking-widest font-secondary text-light-purple grid text-center mb-8 tablet:place-self-end">

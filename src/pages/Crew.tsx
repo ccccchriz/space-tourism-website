@@ -67,7 +67,7 @@ export default function Crew() {
             {data[currentTab].name}
           </span>
         </h3>
-        <p className="font-secondary text-center text-light-purple mx-4 mb-16 mt-4 tablet:max-w-[36rem]">
+        <p className="font-secondary text-center text-light-purple mx-4 mb-16 mt-4 tablet:max-w-[36rem] leading-7">
           {data[currentTab].bio}
         </p>
       </div>
