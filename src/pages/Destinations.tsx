@@ -49,49 +49,54 @@ export default function Destinations() {
 
   return (
     <MainLayout background="destination">
-      <h2 className="flex gap-4 uppercase font-secondary text-white before:content-['01'] before:opacity-25 tracking-widest mt-8">
-        Pick your destination
-      </h2>
-      <img
-        src={data[currentTab].image}
-        alt={data[currentTab].alt}
-        className="max-w-64 my-6"
-      ></img>
-      <div role="tablist" className="flex flex-wrap gap-4 mx-4 mb-12">
-        {data.map((el, index) => (
-          <button
-            key={index}
-            role="tab"
-            aria-selected={index == currentTab}
-            onClick={() => setCurrentTab(index)}
-            className={`tracking-widest uppercase font-secondary text-white ${
-              index == currentTab
-                ? "border-b-2 border-b-white"
-                : "hover:border-b-2 hover:border-b-white hover:border-opacity-50"
-            }`}
-          >
-            {el.name}
-          </button>
-        ))}
+      <div className="grid place-items-center w-full tablet:grid-cols-2 gap-x-16">
+        <h2 className="w-full flex justify-center gap-4 uppercase font-secondary text-white before:content-['01'] before:opacity-25 tracking-widest mt-8 tablet:pl-10 tablet:justify-start tablet:col-[1_/_3]">
+          Pick your destination
+        </h2>
+        <img
+          src={data[currentTab].image}
+          alt={data[currentTab].alt}
+          className="max-w-64 my-6 tablet:col-[1_/_3]"
+        ></img>
+        <div
+          role="tablist"
+          className="flex flex-wrap gap-4 mx-4 mb-12 tablet:col-[1_/_3]"
+        >
+          {data.map((el, index) => (
+            <button
+              key={index}
+              role="tab"
+              aria-selected={index == currentTab}
+              onClick={() => setCurrentTab(index)}
+              className={`tracking-widest uppercase font-secondary text-white ${
+                index == currentTab
+                  ? "border-b-2 border-b-white"
+                  : "hover:border-b-2 hover:border-b-white hover:border-opacity-50"
+              }`}
+            >
+              {el.name}
+            </button>
+          ))}
+        </div>
+        <h3 className="font-primary text-6xl text-white uppercase tablet:col-[1_/_3]">
+          {data[currentTab].name}
+        </h3>
+        <p className="font-secondary text-light-purple text-center mx-7 pb-8 mb-8 border-b border-b-light-purple tablet:col-[1_/_3] tablet:max-w-[36rem]">
+          {data[currentTab].description}
+        </p>
+        <p className="uppercase tracking-widest font-secondary text-light-purple grid text-center mb-8 tablet:place-self-end">
+          Average distance{" "}
+          <span className="font-primary text-3xl text-white tracking-normal">
+            {data[currentTab].distance}
+          </span>
+        </p>
+        <p className="uppercase tracking-widest font-secondary text-light-purple grid text-center mb-16 tablet:mb-8 tablet:place-self-start">
+          Estimated travel time
+          <span className="font-primary text-3xl text-white tracking-normal">
+            {data[currentTab].travel}
+          </span>
+        </p>
       </div>
-      <h3 className="font-primary text-6xl text-white uppercase">
-        {data[currentTab].name}
-      </h3>
-      <p className="font-secondary text-light-purple text-center mx-7 pb-8 mb-8 border-b border-b-light-purple">
-        {data[currentTab].description}
-      </p>
-      <p className="uppercase tracking-widest font-secondary text-light-purple grid text-center mb-8">
-        Average distance{" "}
-        <span className="font-primary text-3xl text-white tracking-normal">
-          {data[currentTab].distance}
-        </span>
-      </p>
-      <p className="uppercase tracking-widest font-secondary text-light-purple grid text-center mb-16">
-        Estimated travel time
-        <span className="font-primary text-3xl text-white tracking-normal">
-          {data[currentTab].travel}
-        </span>
-      </p>
     </MainLayout>
   );
 }
