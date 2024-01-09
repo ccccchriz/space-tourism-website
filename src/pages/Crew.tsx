@@ -37,16 +37,19 @@ export default function Crew() {
 
   return (
     <MainLayout background="crew">
-      <div className="grid place-items-center w-full h-full">
-        <h2 className="w-full flex justify-center gap-4 uppercase font-secondary text-white before:content-['02'] before:opacity-25 tracking-widest mt-8 mb-8 tablet:pl-10 tablet:justify-start">
+      <div className="grid place-items-center w-full h-full desktop:grid-cols-2 desktop:px-24">
+        <h2 className="w-full flex justify-center gap-4 uppercase font-secondary text-white before:content-['02'] before:opacity-25 tracking-widest mt-8 mb-8 tablet:pl-10 tablet:justify-start desktop:text-3xl desktop:pl-0">
           Meet your crew
         </h2>
         <img
           src={data[currentTab].image}
           alt=""
-          className="max-w-64 mx-4 border-b-2 border-b-light-purple tablet:row-[5/6] tablet:border-none tablet:mb-0 tablet:max-w-[28rem] tablet:mt-10"
+          className="max-w-64 mx-4 border-b-2 border-b-light-purple tablet:row-[5/6] tablet:border-none tablet:mb-0 tablet:max-w-[24rem] tablet:mt-10 desktop:col-[2/3] desktop:row-[1/6]"
         ></img>
-        <div role="tablist" className="flex flex-wrap gap-4 mt-4 row-[4/5]">
+        <div
+          role="tablist"
+          className="flex flex-wrap gap-4 mt-4 row-[4/5] desktop:[justify-self:start]"
+        >
           {data.map((el, index) => (
             <button
               key={index}
@@ -61,13 +64,13 @@ export default function Crew() {
             </button>
           ))}
         </div>
-        <h3 className="uppercase font-primary text-center text-white text-opacity-50 grid mt-4">
+        <h3 className="uppercase font-primary text-center text-white text-opacity-50 grid mt-4 desktop:text-left desktop:w-full desktop:text-4xl desktop:gap-4">
           {data[currentTab].role}
-          <span className="text-2xl text-white text-opacity-100">
+          <span className="text-2xl text-white text-opacity-100 desktop:text-6xl">
             {data[currentTab].name}
           </span>
         </h3>
-        <p className="font-secondary text-center text-light-purple mx-4 mb-16 mt-4 tablet:max-w-[36rem] leading-7">
+        <p className="font-secondary text-center text-light-purple mx-4 mb-16 mt-4 tablet:max-w-[36rem] leading-7 desktop:text-left desktop:w-full desktop:max-w-none desktop:pr-36">
           {data[currentTab].bio}
         </p>
       </div>
