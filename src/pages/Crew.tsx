@@ -37,7 +37,7 @@ export default function Crew() {
 
   return (
     <MainLayout background="crew">
-      <div className="grid place-items-center w-full h-full desktop:grid-cols-2 desktop:px-24">
+      <div className="grid place-items-center w-full h-full desktop:grid-cols-2 desktop:px-36">
         <h2 className="w-full flex justify-center gap-4 uppercase font-secondary text-white before:content-['02'] before:opacity-25 tracking-widest mt-8 mb-8 tablet:pl-10 tablet:justify-start desktop:text-3xl desktop:pl-0">
           Meet your crew
         </h2>
