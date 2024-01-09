@@ -37,38 +37,40 @@ export default function Crew() {
 
   return (
     <MainLayout background="crew">
-      <h2 className="flex gap-4 uppercase font-secondary text-white before:content-['02'] before:opacity-25 tracking-widest mt-8 mb-8">
-        Meet your crew
-      </h2>
-      <img
-        src={data[currentTab].image}
-        alt=""
-        className="max-w-64 mx-4 border-b-2 border-b-light-purple"
-      ></img>
-      <div role="tablist" className="flex flex-wrap gap-4 mt-4">
-        {data.map((el, index) => (
-          <button
-            key={index}
-            role="tab"
-            aria-selected={index == currentTab}
-            onClick={() => setCurrentTab(index)}
-            className={`tracking-widest uppercase font-secondary size-6 rounded-full bg-white bg-opacity-15 ${
-              index == currentTab ? "!bg-opacity-100 " : "hover:bg-opacity-50"
-            }`}
-          >
-            <span className="sr-only">{el.role}</span>
-          </button>
-        ))}
+      <div className="grid place-items-center w-full h-full">
+        <h2 className="w-full flex justify-center gap-4 uppercase font-secondary text-white before:content-['02'] before:opacity-25 tracking-widest mt-8 mb-8 tablet:pl-10 tablet:justify-start">
+          Meet your crew
+        </h2>
+        <img
+          src={data[currentTab].image}
+          alt=""
+          className="max-w-64 mx-4 border-b-2 border-b-light-purple tablet:row-[5/6] tablet:border-none tablet:mb-0 tablet:max-w-[28rem] tablet:mt-10"
+        ></img>
+        <div role="tablist" className="flex flex-wrap gap-4 mt-4 row-[4/5]">
+          {data.map((el, index) => (
+            <button
+              key={index}
+              role="tab"
+              aria-selected={index == currentTab}
+              onClick={() => setCurrentTab(index)}
+              className={`tracking-widest uppercase font-secondary size-6 rounded-full bg-white bg-opacity-15 ${
+                index == currentTab ? "!bg-opacity-100 " : "hover:bg-opacity-50"
+              }`}
+            >
+              <span className="sr-only">{el.role}</span>
+            </button>
+          ))}
+        </div>
+        <h3 className="uppercase font-primary text-center text-white text-opacity-50 grid mt-4">
+          {data[currentTab].role}
+          <span className="text-2xl text-white text-opacity-100">
+            {data[currentTab].name}
+          </span>
+        </h3>
+        <p className="font-secondary text-center text-light-purple mx-4 mb-16 mt-4 tablet:max-w-[36rem]">
+          {data[currentTab].bio}
+        </p>
       </div>
-      <h3 className="uppercase font-primary text-center text-white text-opacity-50 grid mt-4">
-        {data[currentTab].role}
-        <span className="text-2xl text-white text-opacity-100">
-          {data[currentTab].name}
-        </span>
-      </h3>
-      <p className="font-secondary text-center text-light-purple mx-4 mb-16 mt-4">
-        {data[currentTab].bio}
-      </p>
     </MainLayout>
   );
 }
