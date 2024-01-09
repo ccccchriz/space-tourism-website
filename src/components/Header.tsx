@@ -90,7 +90,7 @@ export default function Header() {
             <Link to="/">Home</Link>
           </li>
           <li
-            className={`flex gap-2 before:content-['00'] before:font-bold tablet:before:content-none py-2 tablet:border-b-2 tablet:border-opacity-0 tablet:border-b-white ${
+            className={`flex gap-2 before:content-['01'] before:font-bold tablet:before:content-none py-2 tablet:border-b-2 tablet:border-opacity-0 tablet:border-b-white ${
               location == 1
                 ? "tablet:border-opacity-100"
                 : "tablet:hover:border-opacity-25"
@@ -99,7 +99,7 @@ export default function Header() {
             <Link to="/destinations">Destination</Link>
           </li>
           <li
-            className={`flex gap-2 before:content-['00'] before:font-bold tablet:before:content-none py-2 tablet:border-b-2 tablet:border-opacity-0 tablet:border-b-white ${
+            className={`flex gap-2 before:content-['02'] before:font-bold tablet:before:content-none py-2 tablet:border-b-2 tablet:border-opacity-0 tablet:border-b-white ${
               location == 2
                 ? "tablet:border-opacity-100"
                 : "tablet:hover:border-opacity-25"
@@ -108,7 +108,7 @@ export default function Header() {
             <Link to="/crew">Crew</Link>
           </li>
           <li
-            className={`flex gap-2 before:content-['00'] before:font-bold tablet:before:content-none py-2 tablet:border-b-2 tablet:border-opacity-0 tablet:border-b-white ${
+            className={`flex gap-2 before:content-['03'] before:font-bold tablet:before:content-none py-2 tablet:border-b-2 tablet:border-opacity-0 tablet:border-b-white ${
               location == 3
                 ? "tablet:border-opacity-100"
                 : "tablet:hover:border-opacity-25"
