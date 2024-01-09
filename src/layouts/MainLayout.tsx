@@ -17,13 +17,15 @@ const backgrounds = {
 export default function MainLayout({ children, background }: MainLayoutProps) {
   return (
     <>
-      <Header />
-      <main
-        className={`bg-black grow grid items-start justify-items-center bg-no-repeat ${backgrounds[background]}`}
+      <div
+        className={`${backgrounds[background]} min-h-screen  bg-no-repeat bg-cover`}
       >
-        <h1 className="sr-only">Space Tourism</h1>
-        {children}
-      </main>
+        <Header />
+        <main className={`grow grid items-start justify-items-center`}>
+          <h1 className="sr-only">Space Tourism</h1>
+          {children}
+        </main>
+      </div>
     </>
   );
 }

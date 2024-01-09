@@ -50,7 +50,7 @@ export default function Header() {
   console.log(location);
 
   return (
-    <header className="bg-lighter-black p-4 flex justify-between items-center">
+    <header className="bg-lighter-black p-4 flex justify-between items-center desktop:bg-opacity-0">
       <Link to="/">
         <img
           src={logoUrl}
@@ -58,7 +58,7 @@ export default function Header() {
           className="size-10 rounded-full tablet:ml-6"
         />
       </Link>
-
+      <div className="desktop:w-full desktop:h-[1px] desktop:bg-white desktop:mx-12 desktop:bg-opacity-25"></div>
       <button
         aria-expanded={isExpanded}
         onClick={(event: React.MouseEvent) => {
@@ -77,7 +77,7 @@ export default function Header() {
         ref={nav}
         className={`bg-opacity-5 bg-black backdrop-blur-2xl ${
           isExpanded ? "absolute" : "hidden"
-        } tablet:flex right-0 top-0 h-full w-full max-w-64 tablet:max-w-min p-4 pt-20 tablet:pt-4 z-40`}
+        } tablet:flex right-0 top-0 h-full w-full max-w-64 tablet:max-w-min p-4 pt-20 tablet:pt-4 z-40 desktop:px-16`}
       >
         <ul className="flex flex-col tablet:flex-row gap-4 uppercase text-white font-secondary text-xl tracking-widest">
           <li
