@@ -49,7 +49,7 @@ export default function Destinations() {
 
   return (
     <MainLayout background="destination">
-      <div className="grid place-items-center w-full tablet:grid-cols-2 gap-x-16 desktop:grid-cols-[auto_1fr_1fr] px-24">
+      <div className="grid place-items-center w-full tablet:grid-cols-2 gap-x-16 desktop:grid-cols-[auto_1fr_1fr] desktop:px-24">
         <h2 className="w-full flex justify-center gap-4 uppercase font-secondary text-white before:content-['01'] before:opacity-25 tracking-widest mt-8 tablet:pl-10 tablet:justify-start tablet:col-[1/3] desktop:col-[1/4] desktop:text-3xl">
           Pick your destination
         </h2>
