@@ -21,7 +21,7 @@ export default function MainLayout({ children, background }: MainLayoutProps) {
         className={`${backgrounds[background]} min-h-screen  bg-no-repeat bg-cover`}
       >
         <Header />
-        <main className={`grow grid items-start justify-items-center`}>
+        <main className={`grow grid justify-items-center h-full`}>
           <h1 className="sr-only">Space Tourism</h1>
           {children}
         </main>
