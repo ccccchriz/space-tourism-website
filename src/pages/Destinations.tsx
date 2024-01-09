@@ -49,18 +49,18 @@ export default function Destinations() {
 
   return (
     <MainLayout background="destination">
-      <div className="grid place-items-center w-full tablet:grid-cols-2 gap-x-16">
-        <h2 className="w-full flex justify-center gap-4 uppercase font-secondary text-white before:content-['01'] before:opacity-25 tracking-widest mt-8 tablet:pl-10 tablet:justify-start tablet:col-[1_/_3]">
+      <div className="grid place-items-center w-full tablet:grid-cols-2 gap-x-16 desktop:grid-cols-[auto_1fr_1fr] px-24">
+        <h2 className="w-full flex justify-center gap-4 uppercase font-secondary text-white before:content-['01'] before:opacity-25 tracking-widest mt-8 tablet:pl-10 tablet:justify-start tablet:col-[1/3] desktop:col-[1/4] desktop:text-3xl">
           Pick your destination
         </h2>
         <img
           src={data[currentTab].image}
           alt={data[currentTab].alt}
-          className="max-w-64 my-6 tablet:col-[1_/_3]"
+          className="max-w-64 my-6 tablet:col-[1/3] desktop:col-[1/2] desktop:row-[2/6] desktop:px-16 desktop:max-w-[26rem] desktop:mx-8"
         ></img>
         <div
           role="tablist"
-          className="flex flex-wrap gap-4 mx-4 mb-12 tablet:col-[1_/_3]"
+          className="flex flex-wrap gap-4 mx-4 mb-12 tablet:col-[1/3] desktop:col-[2/4]"
         >
           {data.map((el, index) => (
             <button
@@ -78,10 +78,10 @@ export default function Destinations() {
             </button>
           ))}
         </div>
-        <h3 className="font-primary text-6xl text-white uppercase tablet:col-[1_/_3]">
+        <h3 className="font-primary text-6xl text-white uppercase tablet:col-[1/3] desktop:col-[2/4] desktop:text-8xl">
           {data[currentTab].name}
         </h3>
-        <p className="font-secondary text-light-purple text-center mx-7 pb-8 mb-8 border-b border-b-light-purple tablet:col-[1_/_3] tablet:max-w-[36rem] leading-7">
+        <p className="font-secondary text-light-purple text-center mx-7 pb-8 mb-8 border-b border-b-light-purple tablet:col-[1/3] desktop:col-[2/4] tablet:max-w-[36rem] leading-7">
           {data[currentTab].description}
         </p>
         <p className="uppercase tracking-widest font-secondary text-light-purple grid text-center mb-8 tablet:place-self-end">
